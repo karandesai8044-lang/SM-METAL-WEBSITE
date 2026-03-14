@@ -66,6 +66,16 @@
         .extra-section { padding: 40px; text-align: center; background: #fff; border-top: 5px solid #ffcc00; }
         .stats { display: flex; justify-content: space-around; padding: 20px; background: #f4f4f4; margin-bottom: 20px; border-radius: 10px; }
     </style>
+    /* मोबाइल के लिए रिस्पॉन्सिव कोड - बस इसे कॉपी करके डाल दे */
+@media screen and (max-width: 768px) {
+    .header-content { flex-direction: column !important; text-align: center; }
+    .product-grid { grid-template-columns: 1fr !important; }
+    .hero-title { font-size: 28px !important; }
+    .nav-container { flex-direction: column !important; gap: 10px !important; }
+    .whatsapp-float { bottom: 80px !important; }
+    .top-bar { font-size: 10px !important; padding: 5px !important; }
+    iframe { width: 100% !important; height: auto !important; }
+}
 </head>
 <body>
 
