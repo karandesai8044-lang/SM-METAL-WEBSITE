@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | S M METAL</title>
+    <link rel="icon" href="IMEGES/LOGO.jpeg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background: #011539; color: white; }
+        
+        /* नेविगेशन बार */
+        nav { background: #011539; padding: 15px 0; border-bottom: 4px solid #ffcc00; position: sticky; top: 0; z-index: 1000; text-align: center; }
+        .menu-toggle { display: none; font-size: 30px; cursor: pointer; color: #ffcc00; }
+        .nav-links { display: flex; justify-content: center; gap: 40px; }
+        .nav-links a { color: white; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.3s; }
+        .nav-links a:hover { color: #ffcc00; }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav-links { display: none; flex-direction: column; background: #002244; margin-top: 15px; }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 15px; border-bottom: 1px solid #444; }
+        }
+
+        /* Hero Section */
+        .hero-about { 
+            background: linear-gradient(rgba(1, 21, 57, 0.8), rgba(1, 21, 57, 0.8)), url('IMEGES/shope5.jpg'); 
+            background-size: cover; background-position: center; padding: 60px 20px; text-align: center; border-bottom: 5px solid #ffcc00;
+        }
+        .hero-about h1 { font-size: 40px; color: #ffcc00; text-transform: uppercase; letter-spacing: 3px; }
+
+        /* Content Box */
+        .content-box { 
+            max-width: 900px; margin: 40px auto; background: rgba(255, 255, 255, 0.05); 
+            padding: 30px; border-radius: 15px; border: 1px solid rgba(255, 204, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .faq-item { margin-top: 25px; padding: 20px; border-left: 4px solid #ffcc00; background: rgba(0, 34, 68, 0.5); border-radius: 0 10px 10px 0; }
+        .faq-item h3 { margin: 0; color: #ffcc00; }
+        .faq-item p { margin: 10px 0 0 0; color: #e0e0e0; }
+        
+        .back-btn { display: inline-block; margin-top: 30px; padding: 12px 25px; background: #ffcc00; color: #011539; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+        .back-btn:hover { background: white; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰ MENU</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">HOME</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+</nav>
+
+<div class="hero-about">
+    <h1>ABOUT OUR LEGACY</h1>
+    <p>Building strength, one steel product at a time.</p>
+</div>
+
+<div class="content-box">
+    <p style="font-size: 18px; line-height: 1.6; color: #ddd;">
+        S M METAL is a leading manufacturer and supplier of high-quality Stainless Steel products in Ahmedabad. With over 10+ years of experience, we are committed to building a foundation of strength and reliability. As a premier steel supplier, we specialize in delivering high-grade steel products that meet the highest industry standards for quality and precision. We understand that your projects demand durability, which is why every batch is rigorously checked for superior material integrity. Your project’s success is our top priority, and we are here to support it with quality you can rely on and service you can trust.
+    </p>
+
+    <h2 style="color: #ffcc00; text-align: center; margin-top: 50px;">FREQUENTLY ASKED QUESTIONS</h2>
+    
+    <div class="faq-item">
+        <h3>Q: Do you provide GST bills?</h3>
+        <p>A: Yes, we provide 100% GST compliant bills for all purchases to ensure transparency.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Q: What is your supply range?</h3>
+        <p>A: We supply high-quality SS products across India with a robust and reliable delivery network.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Q: Can I get custom sizes?</h3>
+        <p>A: Yes, we specialize in custom-sized fabrication to meet your specific project requirements perfectly.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Q: What are your payment terms?</h3>
+        <p>A: We follow a standard industry payment process. You can discuss the specific advance and credit terms with our team based on your order volume and project duration.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Q: What is the Minimum Order Quantity (MOQ)?</h3>
+        <p>A: We are flexible and cater to both retail and bulk industrial requirements. Please share your specific quantity, and we will provide you with the best available options.</p>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+</div>
+
+</body>
+</html>
