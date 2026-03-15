@@ -14,10 +14,14 @@
         .spinner { width: 60px; height: 60px; border: 6px solid #ffcc00; border-top: 6px solid transparent; border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-        .fade-in { opacity: 0; transform: translateY(50px); transition: all 1s ease-out; }
-        .visible { opacity: 1; transform: translateY(0); }
-
         .top-bar { background: #002244; color: white; padding: 10px 20px; display: flex; justify-content: space-between; font-size: 13px; }
+        
+        /* मोबाइल के लिए स्पेसिफिक स्टाइल */
+        @media only screen and (max-width: 600px) {
+            .top-bar { font-size: 9px !important; padding: 5px 10px !important; }
+            .header-img-mob { width: 35px !important; }
+        }
+
         .hero-section { background: linear-gradient(rgba(1, 21, 57, 0.85), rgba(1, 21, 57, 0.85)), url('shope5.jpg'); background-attachment: fixed; background-size: cover; background-position: center; padding: 80px 20px; text-align: center; color: white; }
         .hero-title { font-size: 35px; margin-bottom: 15px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; }
         .hero-desc { font-size: 18px; margin-bottom: 30px; color: #ffcc00; font-weight: 700; }
@@ -50,7 +54,6 @@
         iframe { width: 100%; max-width: 560px; height: 250px; }
 
         footer { background: #002244; color: white; padding: 40px 20px; text-align: center; }
-        .address-link { color: #ffcc00; text-decoration: none; border: 1px solid #ffcc00; padding: 5px 10px; border-radius: 4px; display: inline-block; margin-top: 10px; }
         .btn-style { background: #002244; color: white; padding: 10px; display: block; margin-top: 10px; text-decoration: none; }
 
         @media (min-width: 768px) {
@@ -80,13 +83,13 @@
 
 <header class="custom-header">
     <div class="header-content">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/200px-Emblem_of_India.svg.png" style="width: 50px; filter: brightness(0) invert(1);">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/200px-Emblem_of_India.svg.png" class="header-img-mob" style="width: 50px; filter: brightness(0) invert(1);">
         <div style="text-align: center;">
             <img src="LOGO.jpeg" class="logo-circle">
             <h1 class="brand-name">S M METAL</h1>
             <p class="tagline">Manufacturers, Stockist & Suppliers</p>
         </div>
-        <img src="https://png.pngtree.com/png-clipart/20230520/original/pngtree-made-in-india-stamp-vector-png-image_9165934.png" style="width: 70px; filter: brightness(0) invert(1);">
+        <img src="https://png.pngtree.com/png-clipart/20230520/original/pngtree-made-in-india-stamp-vector-png-image_9165934.png" class="header-img-mob" style="width: 70px; filter: brightness(0) invert(1);">
     </div>
 </header>
 
@@ -122,49 +125,20 @@
         <div class="product-card"><a href="ms-pipe.html" style="text-decoration: none; color: inherit;"><img src="ms pipe.jpg"><h3>MS Pipe</h3></a></div>
         <div class="product-card"><a href="ms-angle.html" style="text-decoration: none; color: inherit;"><img src="M S Angle.jpg"><h3>MS Angle</h3></a></div>
         <div class="product-card"><a href="chequered-plate.html" style="text-decoration: none; color: inherit;"><img src="Chequered Plate.jpg"><h3>Chequered Plate</h3></a></div>
-    <div class="product-card" style="border: 2px dashed #ff9900; background: #fff8e1; cursor: default;">
+        <div class="product-card" style="border: 2px dashed #ff9900; background: #fff8e1; cursor: default;">
             <h3>Need Custom Size?</h3>
             <a href="https://wa.me/917435990213" class="btn-style">WhatsApp Us</a>
-            <a href="adress.html" target="_blank" style="text-decoration:none; color:inherit;">
-                <div style="background: #151210; padding: 10px; margin-top: 10px; border: 1px solid #ddd; border-radius: 5px; transition: 0.3s;" onmouseover="this.style.background='#ffcc00'" onmouseout="this.style.background='#ffd901'">
-                    <h3 style="margin: 0; font-size: 16px;">Visit Office</h3>
-                    <p style="margin: 5px 0 0 0; font-size: 14px;">Rakhial, Ahmedabad</p>
-                </div>
-            </a>
-            <a href="tel:+917435990213" class="btn-style" style="background: #28a745;">Call Us Now</a>
         </div>
+    </div>
 </div>
 
 <div class="video-container">
     <iframe src="https://www.youtube.com/embed/20wChqOnWXM" allowfullscreen></iframe>
 </div>
-<div class="extra-section">
-    <div class="stats">
-        <div><h2>10+</h2><p>Years</p></div>
-        <div><h2>500+</h2><p>Clients</p></div>
-        <div><h2>100%</h2><p>Quality</p></div>
-    </div>
-    <div style="margin-top: 20px;">
-        <h3>Quality Promise</h3>
-        <p style="font-size: 12px;">Certified SS 202 & 304L & 316L. On-time delivery.</p>
-    </div>
-</div>
-
 <footer>
     <h3>S M METAL</h3>
     <p>Leading suppliers of high-quality Stainless Steel products in Ahmedabad.</p>
     <a href="tel:+917435990213" class="btn-style">Call Us: +91 74359 90213</a>
-    <p>&copy; 2026 S M METAL | Developed By: KARAN DESAI</p>
-</footer>
-
-<script>
-    function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
-    window.onload = () => document.getElementById('loader').style.display = 'none';
-    let current = 0;
-    const slides = document.querySelectorAll('.slide');
-    setInterval(() => { slides[current].style.opacity = 0; current = (current + 1) % slides.length; slides[current].style.opacity = 1; }, 4000);
-</script>
-<footer>
     <p>&copy; 2026 S M METAL | Designed and Developed By: KARAN DESAI</p>
 </footer>
 
