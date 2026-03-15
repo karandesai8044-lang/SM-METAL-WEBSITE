@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>About Us | S M METAL</title>
     <link rel="icon" href="LOGO.jpeg" type="image/jpeg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
@@ -11,16 +11,24 @@
         
         /* नेविगेशन बार */
         nav { background: #011539; padding: 15px 0; border-bottom: 4px solid #ffcc00; position: sticky; top: 0; z-index: 1000; text-align: center; }
-        .menu-toggle { display: none; font-size: 30px; cursor: pointer; color: #ffcc00; }
+        .menu-toggle { display: none; font-size: 20px; cursor: pointer; color: #ffcc00; font-weight: bold; }
         .nav-links { display: flex; justify-content: center; gap: 40px; }
         .nav-links a { color: white; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.3s; }
         .nav-links a:hover { color: #ffcc00; }
 
+        /* मोबाइल के लिए स्पेसिफिक स्टाइल */
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
             .nav-links { display: none; flex-direction: column; background: #002244; margin-top: 15px; }
             .nav-links.active { display: flex; }
-            .nav-links a { padding: 15px; border-bottom: 1px solid #444; }
+            .nav-links a { padding: 15px; border-bottom: 1px solid #444; font-size: 14px; }
+            .hero-about { padding: 40px 10px !important; }
+            .hero-about h1 { font-size: 24px !important; letter-spacing: 1px !important; }
+            .hero-about p { font-size: 12px !important; }
+            .content-box { margin: 20px 10px !important; padding: 15px !important; }
+            .content-box p { font-size: 13px !important; line-height: 1.5 !important; }
+            .faq-item h3 { font-size: 14px !important; }
+            .faq-item p { font-size: 12px !important; }
         }
 
         /* Hero Section */
@@ -28,7 +36,7 @@
             background: linear-gradient(rgba(1, 21, 57, 0.8), rgba(1, 21, 57, 0.8)), url('shope5.jpg'); 
             background-size: cover; background-position: center; padding: 60px 20px; text-align: center; border-bottom: 5px solid #ffcc00;
         }
-        .hero-about h1 { font-size: 40px; color: #ffcc00; text-transform: uppercase; letter-spacing: 3px; }
+        .hero-about h1 { font-size: 40px; color: #ffcc00; text-transform: uppercase; letter-spacing: 3px; margin: 0 0 10px 0; }
 
         /* Content Box */
         .content-box { 
