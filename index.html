@@ -131,102 +131,16 @@
         .extra-section { padding: 40px; text-align: center; background: #fff; border-top: 5px solid #ffcc00; }
 
         .stats { display: flex; justify-content: space-around; padding: 20px; background: #f4f4f4; margin-bottom: 20px; border-radius: 10px; }
-
+@media screen and (max-width: 600px) {
+    .top-bar { 
+        flex-direction: column !important; 
+        text-align: center; 
+        padding: 5px !important;
+        line-height: 1.5;
+    }
+}
     
 
-   @media screen and (max-width: 768px) {
-
-    /* 1. टॉप बार (ईमेल और फोन) को छोटा और सही करने के लिए */
-
-    .top-bar { 
-
-        flex-direction: column !important; 
-
-        gap: 5px !important; 
-
-        padding: 5px !important; 
-
-        font-size: 11px !important; 
-
-        text-align: center !important;
-
-    }
-
-
-
-    /* 2. अशोक स्तंभ और Made in India लोगो को छोटा करने के लिए */
-
-    .header-content { 
-
-        flex-direction: column !important; 
-
-        gap: 10px !important; 
-
-    }
-
-    .header-content img[alt="Ashok Stambh"], 
-
-    .header-content img[alt="made in india logo"] {
-
-        width: 50px !important; /* मोबाइल पर लोगो छोटे रहेंगे */
-
-    }
-
-
-
-    /* 3. ब्रांड नाम और टैगलाइन की फ़ॉन्ट साइज कम करने के लिए */
-
-    .brand-name { font-size: 28px !important; }
-
-    .tagline { font-size: 14px !important; }
-
-    .hero-title { font-size: 22px !important; }
-
-    .hero-desc { font-size: 16px !important; }
-
-
-
-    /* 4. प्रोडक्ट कार्ड और ग्रिड को मोबाइल फ्रेंडली बनाने के लिए */
-
-    .product-grid { 
-
-        grid-template-columns: 1fr !important; 
-
-        padding: 10px !important; 
-
-    }
-
-    .product-card img { height: 180px !important; }
-
-
-
-    /* 5. वॉट्सएप बटन को कोने में छोटा सेट करने के लिए */
-
-    .whatsapp-float { 
-
-        width: 50px !important; 
-
-        height: 50px !important; 
-
-        bottom: 15px !important; 
-
-        right: 15px !important; 
-
-    }
-
-
-
-    /* 6. स्टैट्स (10+, 500+) को छोटा करने के लिए */
-
-    .stats { 
-
-        flex-direction: column !important; 
-
-        gap: 15px !important; 
-
-    }
-
-}
 
     </style>
 
