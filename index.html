@@ -20,10 +20,11 @@
         @media only screen and (max-width: 600px) {
             .top-bar { font-size: 9px !important; padding: 5px 10px !important; }
             .header-img-mob { width: 35px !important; }
-            .hero-section { padding: 40px 10px !important; }
-            .hero-title { font-size: 22px !important; }
-            .hero-desc { font-size: 14px !important; }
-            .slider, .slide { height: 200px !important; }
+            .hero-section { padding: 30px 10px !important; background-size: contain !important; }
+            .hero-title { font-size: 20px !important; line-height: 1.2; }
+            .hero-desc { font-size: 12px !important; }
+            .slider, .slide { height: 180px !important; }
+            .section h2 { font-size: 16px !important; }
         }
 
         .hero-section { background: linear-gradient(rgba(1, 21, 57, 0.85), rgba(1, 21, 57, 0.85)), url('shope5.jpg'); background-attachment: fixed; background-size: cover; background-position: center; padding: 80px 20px; text-align: center; color: white; }
@@ -32,7 +33,7 @@
         .cta-btn { background: #ffcc00; color: #002244; padding: 15px 30px; text-decoration: none; font-weight: 800; border-radius: 5px; display: inline-block; }
 
         .slider { width: 100%; height: 300px; position: relative; overflow: hidden; }
-        .slide { width: 100%; height: 300px; position: absolute; background-size: cover; background-position: center; transition: opacity 1s ease-in-out; opacity: 0; }
+        .slide { width: 100%; height: 300px; position: absolute; background-size: cover; background-position: center; transition: opacity 0.5s ease-in-out; opacity: 0; }
 
         .custom-header { background: #011539; padding: 20px; text-align: center; border-bottom: 5px solid #ffcc00; }
         .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 10px; }
@@ -81,10 +82,10 @@
 
 <div class="slider">
     <div class="slide" style="background-image: url('shope1.jpg'); opacity: 1;"></div>
-    <div class="slide" style="background-image: url('shope2.jpg');"></div>
-    <div class="slide" style="background-image: url('shope3.jpg');"></div>
-    <div class="slide" style="background-image: url('shope4.jpg');"></div>
-    <div class="slide" style="background-image: url('shope5.jpg');"></div>
+    <div class="slide" style="background-image: url('shope2.jpg'); opacity: 0;"></div>
+    <div class="slide" style="background-image: url('shope3.jpg'); opacity: 0;"></div>
+    <div class="slide" style="background-image: url('shope4.jpg'); opacity: 0;"></div>
+    <div class="slide" style="background-image: url('shope5.jpg'); opacity: 0;"></div>
 </div>
 
 <header class="custom-header">
@@ -153,7 +154,11 @@
     window.onload = () => document.getElementById('loader').style.display = 'none';
     let current = 0;
     const slides = document.querySelectorAll('.slide');
-    setInterval(() => { slides[current].style.opacity = 0; current = (current + 1) % slides.length; slides[current].style.opacity = 1; }, 4000);
+    setInterval(() => { 
+        slides[current].style.opacity = 0; 
+        current = (current + 1) % slides.length; 
+        slides[current].style.opacity = 1; 
+    }, 2000); // ड्यूरेशन 4s से घटाकर 2s कर दी है
 </script>
 </body>
 </html>
