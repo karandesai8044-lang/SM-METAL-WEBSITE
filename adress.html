@@ -2,71 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Office Location | S M METAL</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
-            background: #011539; 
-            margin: 0; 
-            padding-top: 80px; /* फिक्स्ड नव के लिए जगह */
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            min-height: 100vh; 
-            color: white; 
-        }
+        body { font-family: 'Segoe UI', sans-serif; background: #011539; margin: 0; padding-top: 80px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; color: white; }
 
-        /* Fixed Navigation */
-        nav { 
-            background: rgba(0, 26, 51, 0.95); 
-            padding: 20px 0; 
-            text-align: center; 
-            position: fixed; 
-            top: 0; 
-            width: 100%; 
-            z-index: 1000; 
-            border-bottom: 3px solid #ffcc00; 
-            backdrop-filter: blur(5px);
-        }
-        nav a { color: #ffcc00; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav { background: rgba(0, 26, 51, 0.95); padding: 15px 0; text-align: center; position: fixed; top: 0; width: 100%; z-index: 1000; border-bottom: 3px solid #ffcc00; }
+        nav a { color: #ffcc00; margin: 0 10px; text-decoration: none; font-weight: bold; font-size: 14px; }
 
-        /* Map Container Animation */
-        .map-wrapper {
-            width: 90%;
-            max-width: 800px;
-            padding: 10px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
-            animation: fadeIn 1.5s ease-in-out;
-            margin-top: 20px;
-        }
+        .map-wrapper { width: 90%; max-width: 800px; padding: 5px; background: white; border-radius: 10px; box-shadow: 0 0 15px rgba(255, 204, 0, 0.5); margin-top: 20px; }
+        .map-container { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 5px; }
+        .map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
+        .back-btn { margin-top: 30px; padding: 12px 25px; background: #ffcc00; color: #011539; text-decoration: none; font-weight: bold; border-radius: 5px; }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 20px; }
+            nav a { font-size: 11px; margin: 0 5px; }
         }
-
-        .map-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .back-btn { margin-top: 30px; padding: 12px 25px; background: #ffcc00; color: #011539; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
-        .back-btn:hover { background: white; transform: scale(1.05); }
     </style>
 </head>
 <body>
@@ -78,14 +31,12 @@
         <a href="contact.html">CONTACT</a>
     </nav>
 
-    <h1 style="margin-top: 20px;">OUR OFFICE LOCATION</h1>
+    <h1>OUR OFFICE LOCATION</h1>
 
     <div class="map-wrapper">
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d406.67615934481!2d72.62789216381833!3d23.01691546729261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8742d776d6d9%3A0xf88d412e1e36fe47!2sS%20M%20METAL!5e1!3m2!1shi!2sin!4v1773288981702!5m2!1shi!2sin" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.954608304918!2d72.63661137525624!3d23.024467316373756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e86576974d6f9%3A0x8670b336338b375b!2sRakhial%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1710523000000!5m2!1sen!2sin" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
     </div>
