@@ -60,6 +60,7 @@
 
         footer { background: #002244; color: white; padding: 40px 20px; text-align: center; }
         .btn-style { background: #002244; color: white; padding: 10px; display: block; margin-top: 10px; text-decoration: none; }
+        .dev-link { color: #ffcc00; text-decoration: underline; font-weight: bold; cursor: pointer; }
 
         @media (min-width: 768px) {
             .nav-container { display: flex; flex-direction: row; justify-content: center; gap: 30px; }
@@ -140,13 +141,11 @@
 </div>
 
 <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/20wChqOnWXM" allowfullscreen></iframe>
+    <iframe src="https://youtu.be/EYfMIM5IQD4" allowfullscreen></iframe>
 </div>
 <footer>
-    <h3>S M METAL</h3>
-    <p>Leading suppliers of high-quality Stainless Steel products in Ahmedabad.</p>
     <a href="tel:+917435990213" class="btn-style">Call Us: +91 74359 90213</a>
-    <p>&copy; 2026 S M METAL | Designed and Developed By: KARAN DESAI</p>
+    <p>&copy; 2026 S M METAL | Designed and Developed By: <a href="karan.html" class="dev-link">KARAN DESAI</a></p>
 </footer>
 
 <script>
@@ -158,7 +157,7 @@
         slides[current].style.opacity = 0; 
         current = (current + 1) % slides.length; 
         slides[current].style.opacity = 1; 
-    }, 2000); // ड्यूरेशन 4s से घटाकर 2s कर दी है
+    }, 2000); 
 </script>
 </body>
 </html>
