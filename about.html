@@ -1,105 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>About Us | S M METAL</title>
-    <link rel="icon" href="LOGO.jpeg" type="image/jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>About Us | S M Metal — Stainless Steel Supplier, Ahmedabad</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="about S M Metal, stainless steel supplier Ahmedabad, MS steel stockist Gujarat" name="keywords">
+    <meta content="Learn about S M Metal — Ahmedabad's trusted stockist and supplier of Stainless Steel & MS products with 15+ years of experience." name="description">
+
+    <link href="img/logo.jpeg" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
     <style>
-        body { font-family: 'Montserrat', sans-serif; margin: 0; background: #011539; color: white; }
-        
-        /* नेविगेशन बार */
-        nav { background: #011539; padding: 15px 0; border-bottom: 4px solid #ffcc00; position: sticky; top: 0; z-index: 1000; text-align: center; }
-        .menu-toggle { display: none; font-size: 20px; cursor: pointer; color: #ffcc00; font-weight: bold; }
-        .nav-links { display: flex; justify-content: center; gap: 40px; }
-        .nav-links a { color: white; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.3s; }
-        .nav-links a:hover { color: #ffcc00; }
-
-        /* मोबाइल के लिए स्पेसिफिक स्टाइल */
-        @media (max-width: 768px) {
-            .menu-toggle { display: block; }
-            .nav-links { display: none; flex-direction: column; background: #002244; margin-top: 15px; }
-            .nav-links.active { display: flex; }
-            .nav-links a { padding: 15px; border-bottom: 1px solid #444; font-size: 14px; }
-            .hero-about { padding: 40px 10px !important; }
-            .hero-about h1 { font-size: 24px !important; letter-spacing: 1px !important; }
-            .hero-about p { font-size: 12px !important; }
-            .content-box { margin: 20px 10px !important; padding: 15px !important; }
-            .content-box p { font-size: 13px !important; line-height: 1.5 !important; }
-            .faq-item h3 { font-size: 14px !important; }
-            .faq-item p { font-size: 12px !important; }
+        .page-header {
+            background: linear-gradient(rgba(2, 36, 91, .85), rgba(2, 36, 91, .85)), url('img/hero-2.jpg') center center no-repeat;
+            background-size: cover;
+            padding: 90px 0 80px;
         }
-
-        /* Hero Section */
-        .hero-about { 
-            background: linear-gradient(rgba(1, 21, 57, 0.8), rgba(1, 21, 57, 0.8)), url('shope5.jpg'); 
-            background-size: cover; background-position: center; padding: 60px 20px; text-align: center; border-bottom: 5px solid #ffcc00;
+        .page-header h1 { color: #fff; }
+        .breadcrumb-item, .breadcrumb-item a { color: #fff; text-decoration: none; }
+        .breadcrumb-item.active { color: var(--primary); }
+        .breadcrumb-item + .breadcrumb-item::before { color: #fff; }
+        .whatsapp-float {
+            position: fixed; right: 25px; bottom: 25px; z-index: 999;
+            width: 55px; height: 55px; border-radius: 50%; background: #25d366;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, .5); transition: .3s;
         }
-        .hero-about h1 { font-size: 40px; color: #ffcc00; text-transform: uppercase; letter-spacing: 3px; margin: 0 0 10px 0; }
-
-        /* Content Box */
-        .content-box { 
-            max-width: 900px; margin: 40px auto; background: rgba(255, 255, 255, 0.05); 
-            padding: 30px; border-radius: 15px; border: 1px solid rgba(255, 204, 0, 0.2);
-            backdrop-filter: blur(10px);
+        .whatsapp-float:hover { transform: scale(1.12); }
+        .whatsapp-float i { color: #fff; font-size: 28px; }
+        .why-card {
+            background: #fff; box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+            padding: 40px 30px; height: 100%; transition: .4s; text-align: center;
         }
-        
-        .faq-item { margin-top: 25px; padding: 20px; border-left: 4px solid #ffcc00; background: rgba(0, 34, 68, 0.5); border-radius: 0 10px 10px 0; }
-        .faq-item h3 { margin: 0; color: #ffcc00; }
-        .faq-item p { margin: 10px 0 0 0; color: #e0e0e0; }
-        
-        .back-btn { display: inline-block; margin-top: 30px; padding: 12px 25px; background: #ffcc00; color: #011539; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
-        .back-btn:hover { background: white; transform: scale(1.05); }
+        .why-card:hover { transform: translateY(-8px); box-shadow: 0 0 45px rgba(0, 0, 0, .15); }
+        .why-card .why-icon {
+            width: 80px; height: 80px; margin: 0 auto 22px; border-radius: 50%;
+            background: var(--primary); color: #fff; font-size: 30px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .accordion-button:not(.collapsed) { color: var(--primary); background: rgba(255,94,20,.06); }
+        .accordion-button:focus { box-shadow: none; }
+        /* Brand logo in navbar */
+        .navbar .navbar-brand { background: #fff; padding: 6px 22px 6px 30px; height: auto; }
+        .navbar .navbar-brand::after { display: none; }
+        .brand-logo { height: 56px; width: auto; }
+        .brand-name { font-family: 'Rubik', sans-serif; font-size: 24px; font-weight: 700; line-height: 1; letter-spacing: 2px; color: var(--dark); }
+        .brand-sub { font-size: 10.5px; letter-spacing: 3px; color: var(--primary); font-weight: 600; text-transform: uppercase; }
+        @media (max-width: 575px) { .brand-logo { height: 46px; } }
+        /* Card tilt + glow */
+        .why-card { position: relative; overflow: hidden; transform-style: preserve-3d; will-change: transform; }
+        .why-card::before {
+            content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+            background: linear-gradient(135deg, rgba(255, 94, 20, .12) 0%, transparent 55%);
+            opacity: 0; transition: opacity .4s;
+        }
+        .why-card:hover::before { opacity: 1; }
+        .why-card > * { position: relative; z-index: 1; }
     </style>
 </head>
+
 <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
 
-<nav>
-    <div class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰ MENU</div>
-    <div class="nav-links" id="navLinks">
-        <a href="index.html">HOME</a>
-        <a href="contact.html">CONTACT</a>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-0">
+        <div class="row g-0 d-none d-lg-flex">
+            <div class="col-lg-6 ps-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center text-white">
+                    <span>Follow Us:</span>
+                    <a class="btn btn-link text-light" href="https://www.instagram.com/s_m_metal_?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-link text-light" href="https://wa.me/917435990213" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a class="btn btn-link text-light" href="mailto:smmetal4576@gmail.com"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-end">
+                <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
+                    <span class="fs-6 fw-bold me-2"><i class="fa fa-map-marker-alt me-2"></i>Rakhial, Ahmedabad</span>
+                    <span class="fs-5 fw-bold me-2 ms-3"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
+                    <span class="fs-5 fw-bold">+91 74359 90213</span>
+                </div>
+            </div>
+        </div>
     </div>
-</nav>
+    <!-- Topbar End -->
 
-<div class="hero-about">
-    <h1>ABOUT OUR LEGACY</h1>
-    <p>Building strength, one steel product at a time.</p>
-</div>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
+        <a href="index.html" class="navbar-brand me-0 d-flex align-items-center">
+            <img src="img/logo.jpeg" class="brand-logo" alt="S M Metal logo">
+            <span class="ms-2 d-none d-sm-block">
+                <span class="brand-name d-block">S M METAL</span>
+                <span class="brand-sub d-block">Stainless Steel &amp; MS</span>
+            </span>
+        </a>
+        <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link active">About</a>
+                <div class="nav-item dropdown">
+                    <a href="index.html#products" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <a href="ss-products.html" class="dropdown-item">Stainless Steel</a>
+                        <a href="ms-products.html" class="dropdown-item">Mild Steel</a>
+                        <a href="fittings-flanges.html" class="dropdown-item">Fittings &amp; Flanges</a>
+                        <a href="valves.html" class="dropdown-item">Industrial Valves</a>
+                        <a href="non-ferrous.html" class="dropdown-item">Non-Ferrous Metals</a>
+                    </div>
+                </div>
+                <a href="index.html#why" class="nav-item nav-link">Why Us</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="https://wa.me/917435990213" target="_blank" class="btn btn-primary px-3 d-none d-lg-block"><i class="fab fa-whatsapp me-2"></i>Get a Quote</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
 
-<div class="content-box">
-    <p style="font-size: 18px; line-height: 1.6; color: #ddd;">
-        S M METAL is a leading manufacturer and supplier of high-quality Stainless Steel products in Ahmedabad. With over 10+ years of experience, we are committed to building a foundation of strength and reliability. As a premier steel supplier, we specialize in delivering high-grade steel products that meet the highest industry standards for quality and precision. We understand that your projects demand durability, which is why every batch is rigorously checked for superior material integrity. Your project’s success is our top priority, and we are here to support it with quality you can rely on and service you can trust.
-    </p>
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header">
+        <div class="container text-center">
+            <h1 class="display-4 mb-3 wow fadeInDown">About Us</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">About</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
 
-    <h2 style="color: #ffcc00; text-align: center; margin-top: 50px;">FREQUENTLY ASKED QUESTIONS</h2>
-    
-    <div class="faq-item">
-        <h3>Q: Do you provide GST bills?</h3>
-        <p>A: Yes, we provide 100% GST compliant bills for all purchases to ensure transparency.</p>
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="row gx-3 h-100">
+                        <div class="col-6 align-self-start wow fadeInUp" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="img/about-1.jpg" alt="S M Metal">
+                        </div>
+                        <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="img/about-2.jpg" alt="S M Metal">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="fw-medium text-uppercase text-primary mb-2">Our Story</p>
+                    <h1 class="display-5 mb-4">Building Strength, One Steel Product At A Time</h1>
+                    <p class="mb-4">S M Metal is a leading stockist and supplier of high-quality Stainless Steel and Mild Steel products in Rakhial, Ahmedabad. With 15+ years of experience, we are committed to building a foundation of strength and reliability — delivering high-grade steel that meets the highest industry standards for quality and precision.</p>
+                    <p class="mb-4">We understand that your projects demand durability, which is why every batch is rigorously checked for superior material integrity. As a dedicated stockist, we keep a large ready inventory — passing on competitive prices, faster delivery and complete transparency. Your project's success is our top priority: quality you can rely on, and service you can trust.</p>
+                    <div class="row g-3 pt-2">
+                        <div class="col-sm-6"><p class="mb-2"><i class="fa fa-check text-primary me-2"></i>Stockist & Supplier</p></div>
+                        <div class="col-sm-6"><p class="mb-2"><i class="fa fa-check text-primary me-2"></i>SS 202, 304, 316 & MS Grades</p></div>
+                        <div class="col-sm-6"><p class="mb-2"><i class="fa fa-check text-primary me-2"></i>Custom Cutting To Any Size</p></div>
+                        <div class="col-sm-6"><p class="mb-2"><i class="fa fa-check text-primary me-2"></i>100% GST Compliant Billing</p></div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary py-3 px-5 mt-4">Contact Us</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="faq-item">
-        <h3>Q: What is your supply range?</h3>
-        <p>A: We supply high-quality SS products across India with a robust and reliable delivery network.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Q: Can I get custom sizes?</h3>
-        <p>A: Yes, we specialize in custom-sized fabrication to meet your specific project requirements perfectly.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Q: What are your payment terms?</h3>
-        <p>A: We follow a standard industry payment process. You can discuss the specific advance and credit terms with our team based on your order volume and project duration.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Q: What is the Minimum Order Quantity (MOQ)?</h3>
-        <p>A: We are flexible and cater to both retail and bulk industrial requirements. Please share your specific quantity, and we will provide you with the best available options.</p>
-    </div>
+    <!-- About End -->
 
-    <div style="text-align: center;">
-        <a href="index.html" class="back-btn">← Back to Home</a>
+    <!-- Facts Start -->
+    <div class="container-fluid facts my-5 p-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
+                <div class="text-center border p-5">
+                    <i class="fa fa-certificate fa-3x text-white mb-3"></i>
+                    <h1 class="display-2 text-primary mb-0"><span class="counter" data-target="15">0</span>+</h1>
+                    <span class="fs-5 fw-semi-bold text-white">Years Experience</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.3s">
+                <div class="text-center border p-5">
+                    <i class="fa fa-users fa-3x text-white mb-3"></i>
+                    <h1 class="display-2 text-primary mb-0"><span class="counter" data-target="1300">0</span>+</h1>
+                    <span class="fs-5 fw-semi-bold text-white">Happy Clients</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.5s">
+                <div class="text-center border p-5">
+                    <i class="fa fa-cubes fa-3x text-white mb-3"></i>
+                    <h1 class="display-2 text-primary mb-0"><span class="counter" data-target="45">0</span>+</h1>
+                    <span class="fs-5 fw-semi-bold text-white">Product Types</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.7s">
+                <div class="text-center border p-5">
+                    <i class="fa fa-check-double fa-3x text-white mb-3"></i>
+                    <h1 class="display-2 text-primary mb-0"><span class="counter" data-target="100">0</span>%</h1>
+                    <span class="fs-5 fw-semi-bold text-white">Quality Assured</span>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    <!-- Facts End -->
 
+    <!-- Why Us Cards Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="fw-medium text-uppercase text-primary mb-2">Our Strengths</p>
+                <h1 class="display-5 mb-4">Why Choose S M Metal?</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="why-card"><div class="why-icon"><i class="fa fa-warehouse"></i></div><h4>Huge Ready Stock</h4><p class="mb-0 text-secondary">We keep a large ready inventory of SS &amp; MS — quick supply and fast dispatch, no long waits.</p></div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="why-card"><div class="why-icon"><i class="fa fa-award"></i></div><h4>Quality Assured</h4><p class="mb-0 text-secondary">Every batch rigorously checked before dispatch. Trusted brands: Jindal, SAIL & premium imports.</p></div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="why-card"><div class="why-icon"><i class="fa fa-shipping-fast"></i></div><h4>Fast Delivery</h4><p class="mb-0 text-secondary">Quick and reliable dispatch across Ahmedabad and all over India — on time, every time.</p></div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="why-card"><div class="why-icon"><i class="fa fa-ruler-combined"></i></div><h4>Custom Sizes</h4><p class="mb-0 text-secondary">We cut and supply stainless steel in any size or specification your project demands.</p></div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="why-card"><div class="why-icon"><i class="fa fa-file-invoice"></i></div><h4>100% GST Compliant</h4><p class="mb-0 text-secondary">Proper GST bills for all purchases — complete transparency and accountability guaranteed.</p></div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="why-card"><div class="why-icon"><i class="fa fa-boxes"></i></div><h4>Retail & Bulk Orders</h4><p class="mb-0 text-secondary">Flexible MOQ — we cater to small retail needs and large industrial bulk orders alike.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why Us Cards End -->
+
+    <!-- FAQ Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="fw-medium text-uppercase text-primary mb-2">FAQ</p>
+                <h1 class="display-5 mb-4">Frequently Asked Questions</h1>
+                <p>Everything you need to know before placing an order.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Do you provide GST bills?</button></h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes, we provide 100% GST compliant bills for all purchases to ensure complete transparency and accountability.</div></div>
+                        </div>
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">What is your supply range?</button></h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">We supply high-quality SS & MS products across India with a robust and reliable delivery network — from Ahmedabad to all major cities.</div></div>
+                        </div>
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Can I get custom sizes?</button></h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes, we specialize in custom-sized cutting and fabrication to meet your specific project requirements perfectly — any size, any specification.</div></div>
+                        </div>
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">What are your payment terms?</button></h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">We follow standard industry payment processes. You can discuss specific advance and credit terms with our team based on your order volume and project duration.</div></div>
+                        </div>
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">What is the Minimum Order Quantity (MOQ)?</button></h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">We are flexible and cater to both retail and bulk industrial requirements. Please share your specific quantity and we will provide the best available options.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-4">Our Office</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Block-A, Suvan Business Park, 243/2, Keval Kanta Rd, nr. Soma Textile Mill, Industrial Area, Rakhial, Ahmedabad, Gujarat — 380023</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 74359 90213</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>smmetal4576@gmail.com</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href="https://wa.me/917435990213" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.instagram.com/s_m_metal_?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href="mailto:smmetal4576@gmail.com"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="index.html#products">Our Products</a>
+                    <a class="btn btn-link" href="index.html#why">Why Choose Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="https://wa.me/917435990213" target="_blank">Get a Quote</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-4">Business Hours</h5>
+                    <p class="mb-1">Monday - Saturday</p>
+                    <h6 class="text-light">09:30 am - 08:00 pm</h6>
+                    <p class="mb-1">Sunday</p>
+                    <h6 class="text-light">Closed</h6>
+                    <a href="https://wa.me/917435990213" target="_blank" class="btn btn-primary mt-3 px-4"><i class="fab fa-whatsapp me-2"></i>Chat With Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+        <div class="container text-center">
+            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="index.html">S M Metal</a>, Ahmedabad. All Rights Reserved.</p>
+            <p class="mb-0">Designed By <a class="fw-semi-bold" href="https://karandesai8044-lang.github.io/" target="_blank">K-Tech Solution</a></p>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <a href="https://wa.me/917435990213" target="_blank" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        /* ── 3D CARD TILT ── */
+        document.querySelectorAll('.why-card').forEach(function (card) {
+            card.addEventListener('mousemove', function (e) {
+                var r = card.getBoundingClientRect();
+                var rx = ((e.clientY - r.top - r.height / 2) / (r.height / 2)) * 6;
+                var ry = ((e.clientX - r.left - r.width / 2) / (r.width / 2)) * -6;
+                card.style.transition = 'none';
+                card.style.transform = 'perspective(800px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateZ(8px)';
+            });
+            card.addEventListener('mouseleave', function () {
+                card.style.transition = 'transform .5s cubic-bezier(.4,0,.2,1)';
+                card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateZ(0)';
+            });
+        });
+
+        /* ── ANIMATED COUNTERS ── */
+        var counters = document.querySelectorAll('.counter');
+        var cObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                if (en.isIntersecting) {
+                    var el = en.target, t = +el.dataset.target, s = 0;
+                    var step = Math.max(1, Math.ceil(t / 55));
+                    var ti = setInterval(function () {
+                        s = Math.min(s + step, t);
+                        el.textContent = s;
+                        if (s >= t) clearInterval(ti);
+                    }, 28);
+                    cObs.unobserve(el);
+                }
+            });
+        }, { threshold: 0.4 });
+        counters.forEach(function (c) { cObs.observe(c); });
+    </script>
 </body>
+
 </html>
